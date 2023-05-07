@@ -1,0 +1,112 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* hsl blue */
+  --primary-hsl-blue: 200, 100%, 91%;
+  --secondary-hsl-blue: 200, 100%, 50%;
+  --deep-hsl-blue: 200, 100%, 6%;
+
+  /* color */
+  --text-color: #fff;
+}
+
+body {
+  background-color: hsla(var(--deep-hsl-blue), 0.5);
+  color: var(--text-color);
+  font-family: Helvetica, sans-serif;
+}
+
+div.tip-container {
+  background-color: hsla(var(--secondary-hsl-blue), 0.6);
+  padding: 1em;
+  width: max(90%, 80%);
+  height: 60vh;
+  margin: 4em auto;
+  border: 0.1em solid #3335;
+  border-radius: 0.4em;
+}
+
+div.bill-container,
+div.total-tip,
+div.total-person,
+div.total-amount {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1em;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+div.bill-container input,
+div.total-tip input {
+  padding: 0.3em;
+  outline: none;
+  border: 0.08em solid rgb(0, 0, 0, 0.3);
+  border-radius: 0.2em;
+  background-color: transparent;
+  box-shadow: 0 0.3em 0.5em rgb(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+div.bill-container input:focus,
+div.total-tip input:focus {
+  outline: none;
+}
+
+div.total-person button {
+  padding: 0.2em 0.4em;
+  border: none;
+  cursor: pointer;
+}
+
+div.total-person span {
+  padding: 0.2em;
+  display: inline-block;
+  width: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+div.error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  width: max(80%, 75%);
+  margin: 0 auto;
+  height: 5em;
+  padding: 1em;
+  background-color: hsl(var(--secondary-hsl-blue));
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.hide {
+  opacity: 0;
+  transform: scale(0);
+}
+
+button {
+  background-color: hsla(var(--deep-hsl-blue), 0.5);
+  color: var(--text-color);
+}
+
+div button.close {
+  width: 100%;
+  border: 0.1em solid rgb(0, 0, 0, 0.3);
+  border-radius: 0.3em;
+  margin-top: 0.1em;
+  cursor: pointer;
+}

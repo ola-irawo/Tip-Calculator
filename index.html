@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+    <body>
+
+        <section class="tip-section">
+
+            <div class="error hide">
+                <h3>You can't go less than "1"</h3>
+                <button class="close">Close</button>
+            </div>
+
+            <div  class="tip-container">
+                <h1>Tip Calculator</h1>
+
+                <div class="bill-container">
+                    <label for="bill">Bill:</label>
+                    <input type="text" id="bill">
+                </div>
+                
+                <div class="total-tip">
+                    <label for="tip">Tip:</label>
+                    <input type="text" id="tip">
+                </div>
+
+
+                <div class="total-person">
+                    <h3>People</h3>
+                    <div>
+                        <button id="decrease">-</button>
+                        <span>1</span>
+                        <button id="increase">+</button>
+                    </div>
+                       
+                </div>
+
+                <div>
+                    <div class="total-amount">
+                        <h3>Total Per Person</h3>
+                        <div>$0.00</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        
+    </body>
+
+</html>
